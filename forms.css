@@ -18,7 +18,8 @@ input, textarea, select {
     appearance: none;
     width: 100%;
     border-radius: .5rem;
-    border: 1px solid var(--stroke-default);
+    border: 2px solid transparent;
+    outline: 1px solid var(--stroke-default);
 
     padding: .75rem 1rem;
 
@@ -35,7 +36,7 @@ label {
 
 input:focus, select:focus, textarea:focus, input[type="date"]:focus-within {
     outline: .25rem solid var(--surface-secondary);
-    border: .125rem solid var(--stroke-highlight);
+    border-color: var(--stroke-highlight);
 }
 
 input[type="date"] {
@@ -54,7 +55,8 @@ select {
 }
 
 .dropzone {
-    border: 1px dashed var(--stroke-default);
+    border: 2px dashed transparent;
+    outline: 1px dashed var(--stroke-default);
     border-radius: .25rem;
 
     display: grid;
@@ -78,7 +80,7 @@ select {
     }
 
     &:hover, &:has(input:focus) {
-        border-width: 2px;
+        outline-width: 0;
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
 
@@ -163,6 +165,7 @@ label + .radio-wrapper {
     padding: 2rem .5rem .5rem;
 
     position: relative;
+
     & input, & input:focus, & input:hover {
         all: unset;
         position: absolute;
