@@ -13,6 +13,12 @@ main {
     & .main-container {
         max-width: 33rem;
         margin-left: auto;
+
+        & .voltar {
+            display: flex;
+            margin-bottom: 1.5rem;
+            gap: .5rem;
+        }
     }
 
     & .back {
